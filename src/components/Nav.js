@@ -3,8 +3,8 @@ import '../styles/Nav.css'
 
 const Nav = () => {
     return (
+        <>
         <div className='nav-header'>
-
             <div className="brand">devjobs</div>
 
                 <div className="toggle-theme">
@@ -13,9 +13,9 @@ const Nav = () => {
                         <div className="slider"></div>
                     </label>
 
-            </div>
-            
+            </div>  
         </div>
+        </>
     )
 }
 
