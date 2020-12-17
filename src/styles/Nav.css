@@ -1,0 +1,31 @@
+.nav-header{
+    display:flex;
+    justify-content: space-between;
+    position: relative;
+    min-height: 15vh;
+    top: 0;
+    border-radius: 0 0 0 50px;
+    background-image: url('https://vivaldi.com/wp-content/uploads/2018/02/tab-bar-bg-gradient.jpg');
+}
+
+.brand {
+   margin: 1rem;
+   font-family: 'Courier New', Courier, monospace;
+   font-size: 30px;
+   padding-left: 2.3rem;
+   padding-top: 1.2rem;
+   color: #ffffff;
+}
+
+.toggle-theme {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    input {
+        display: none;
+        &:checked + .slider {
+            background-color: gray;
+            border-color: rgb(156, 156, 231);
+        }
+    }
+}

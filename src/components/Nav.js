@@ -1,18 +1,21 @@
 import React from 'react'
+import '../styles/Nav.css'
 
 const Nav = () => {
     return (
-        <nav className='nav-header'>
+        <div className='nav-header'>
 
             <div className="brand">devjobs</div>
-                <div className="toggle-them">
+
+                <div className="toggle-theme">
                     <label htmlFor='checkbox'>
-                        
+                        <input type="checkbox" className='checkbox'/>
+                        <div className="slider"></div>
                     </label>
 
             </div>
             
-        </nav>
+        </div>
     )
 }
 
