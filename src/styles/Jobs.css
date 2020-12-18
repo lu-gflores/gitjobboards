@@ -4,6 +4,25 @@ label {
     padding: .7rem;
 
 }
+form {
+    z-index: 1;
+}
+.card {
+    width: 18rem; 
+    height:15rem; 
+    margin: 0 auto 2rem auto;
+    float: none;
+}
+.card-title {
+    font-weight: bold;
+}
+.card-body {
+    word-break: break-all;
+}
+.company-logo {
+    height: 40px;
+    width: 40px;
+}
 .input-group {
     margin-bottom: 1rem;
 }
