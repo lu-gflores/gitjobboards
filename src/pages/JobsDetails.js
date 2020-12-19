@@ -75,6 +75,16 @@ class JobsDetails extends React.Component {
           </div>
           }
 
+          {this.state.data.length !== 0 &&
+          <footer className='footer mt-auto py-3 bg-light'>
+            <div className="container">
+                <p className='fs-2'>{this.state.data.title}</p>
+                <a href={this.state.data.url} rel='noopener noreferrer' target='_blank' className='btn btn-secondary apply-btn'>Apply Here</a>
+                <p className='fs-5'>{this.state.data.company}</p>
+            </div>
+          </footer>
+          }
+
         </div>
     ) 
     }
