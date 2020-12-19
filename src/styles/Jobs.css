@@ -7,11 +7,16 @@ label {
 form {
     z-index: 1;
 }
+a {
+    text-decoration: none;
+    color: black;
+}
 .card {
     width: 18rem; 
     height:15rem; 
     margin: 0 auto 2rem auto;
     float: none;
+    cursor: pointer;
 }
 .card-title {
     font-weight: bold;

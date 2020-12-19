@@ -1,7 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
+import {Link} from 'react-router-dom'
 import PagePagination from './PagePagination'
 import Logo from '../image/placeholder.jpg'
+
 import '../styles/Jobs.css'
 
 const Jobs = () => {
@@ -60,7 +62,8 @@ const searchJobs = () => {
               {jobPost.map(job => 
 
               <div className="col-md-4" key={job.id}>
-                <div className='card' >
+              <Link to={`/:${job.id}`}>
+                <div className='card'  >
                     <img className='company-logo' 
                     src={job.company_logo === null ? Logo : job.company_logo} 
                     alt={job.company}
@@ -70,10 +73,11 @@ const searchJobs = () => {
                     <h5 className='card-title'>{job.title}</h5>
                     <h6 className='card-subtitle'>{job.company}</h6>
                     <br/>
-                    <a href='#' >{job.location}</a>
+                    <p href='#' >{job.location}</p>
                  </div>
                 </div>
 
+              </Link>
               </div>     
             )}  
             </div>    
