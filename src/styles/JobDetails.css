@@ -1,10 +1,31 @@
+.card-horizontal{
+    display: flex;
+    flex: 1 1 auto;
+}
+.company-card {
+    cursor: inherit;
+}
+.apply-btn {
+
+    display: flex;
+    float: right;
+    justify-content: flex-end;
+}
 .job-description {
     width: 100%;
     height: 100%;
     word-break: normal;
+    cursor: inherit;
 }
 .apply-here{
     background-image: url('https://vivaldi.com/wp-content/uploads/2018/02/tab-bar-bg-gradient.jpg');
     color: white;
-    
+    width: 100%;
+    height: 100%;
+    word-break: normal;
+    cursor: inherit;
+}
+.logo {
+    height: 10rem;
+    width: 10rem;
 }

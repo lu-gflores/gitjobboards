@@ -73,7 +73,7 @@ const searchJobs = () => {
                     <h5 className='card-title'>{job.title}</h5>
                     <h6 className='card-subtitle'>{job.company}</h6>
                     <br/>
-                    <p href='#' >{job.location}</p>
+                    <p className='location-text'>{job.location}</p>
                  </div>
                 </div>
 

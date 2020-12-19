@@ -21,9 +21,10 @@ a {
 .card-title {
     font-weight: bold;
 }
-.card-body {
-    word-break: break-all;
+.location-text {
+ word-break: break-all;
 }
+
 .company-logo {
     height: 40px;
     width: 40px;
