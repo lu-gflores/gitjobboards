@@ -62,7 +62,7 @@ const searchJobs = () => {
               {jobPost.map(job => 
 
               <div className="col-md-4" key={job.id}>
-              <Link to={`/:${job.id}`}>
+              <Link to={`/${job.id}`}>
                 <div className='card'  >
                     <img className='company-logo' 
                     src={job.company_logo === null ? Logo : job.company_logo} 
