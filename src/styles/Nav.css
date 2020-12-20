@@ -17,15 +17,10 @@
    color: #ffffff;
 }
 
-.toggle-theme {
-    display: inline-block;
-    position: relative;
-    width: 40px;
-    input {
-        display: none;
-        &:checked + .slider {
-            background-color: gray;
-            border-color: rgb(156, 156, 231);
-        }
-    }
+.toggle-light {
+  background-color: #ffffff;
+
+}
+.toggle-dark {
+  
 }

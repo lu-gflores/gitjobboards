@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import {Link} from 'react-router-dom'
-import InfiniteScroll from 'react-infinite-scroller'
-import PagePagination from './PagePagination'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faSearch, faLocationArrow} from '@fortawesome/free-solid-svg-icons'
 import Logo from '../image/placeholder.jpg'
 
 import '../styles/Jobs.css'
@@ -15,7 +15,7 @@ const [input, setInput] = useState('');
 
 
 useEffect(() => {
-    axios.get(`https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json`)
+    axios.get('https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json')
     .then(data => {
         setJobPost(data.data)
     })
@@ -40,7 +40,7 @@ const searchJobs = () => {
         setJobPost(data.data)
     })
 }
-
+//for loading more items
 const handlepage = n => {
   axios.get(`https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?page=${n}`)
     .then(data => {
@@ -53,9 +53,9 @@ const handlepage = n => {
         <div className='container'>
         
           <form className='input-group'>
-             <span className='input-group-text'>0</span>
+             <span className='input-group-text'><FontAwesomeIcon icon={faSearch}/></span>
                 <input type='text' onChange={roleInput} name='role' className='form-control' placeholder='Filter by title, company, expertise...'/>
-            <span className='input-group-text d-none d-md-block'>L</span>
+            <span className='input-group-text d-none d-md-block'><FontAwesomeIcon icon={faLocationArrow}/></span>
               <input type='text' name='location' className='form-control d-none d-md-block' placeholder='Filter by location'/>
 
               <div className='input-group-text d-none d-md-block'>

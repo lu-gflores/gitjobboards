@@ -48,7 +48,7 @@ class JobsDetails extends React.Component {
                 </div>
                 <div className="card-body">
                     <h5 className='card-title'>{this.state.data.company}</h5>
-                    <a href={this.state.data.company_url} target='_blank' rel='noopener noreferrer' className='btn btn-primary'>Company Site</a>
+                    <a href={this.state.data.company_url} target='_blank' rel='noopener noreferrer' className='btn btn-primary' style={{float:'right'}}>Company Site</a>
                 </div>
             </div>
         </div>
