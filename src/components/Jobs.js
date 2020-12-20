@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import {Link} from 'react-router-dom'
+import InfiniteScroll from 'react-infinite-scroller'
 import PagePagination from './PagePagination'
 import Logo from '../image/placeholder.jpg'
 
@@ -10,6 +11,7 @@ const Jobs = () => {
 
 const [jobPost, setJobPost] = useState(null);
 const [input, setInput] = useState('');
+
 
 
 useEffect(() => {
@@ -39,15 +41,22 @@ const searchJobs = () => {
     })
 }
 
+const handlepage = n => {
+  axios.get(`https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?page=${n}`)
+    .then(data => {
+        setJobPost(data.data)
+    })
+}
+
     return (
 
         <div className='container'>
-        {/* User input search */}
+        
           <form className='input-group'>
              <span className='input-group-text'>0</span>
                 <input type='text' onChange={roleInput} name='role' className='form-control' placeholder='Filter by title, company, expertise...'/>
             <span className='input-group-text d-none d-md-block'>L</span>
-              <input type='text' name='location' className='form-control d-none d-md-block' placeholder='filter by location'/>
+              <input type='text' name='location' className='form-control d-none d-md-block' placeholder='Filter by location'/>
 
               <div className='input-group-text d-none d-md-block'>
                 <input className='form-check-input d-none d-md-block' name='fulltime' type='checkbox' value=''/>
@@ -59,9 +68,11 @@ const searchJobs = () => {
         
         {jobPost && (
             <div className="row">
+            
               {jobPost.map(job => 
 
               <div className="col-md-4" key={job.id}>
+
               <Link to={`/${job.id}`}>
                 <div className='card'  >
                     <img className='company-logo' 
@@ -78,8 +89,10 @@ const searchJobs = () => {
                 </div>
 
               </Link>
-              </div>     
+              
+              </div>  
             )}  
+             
             </div>    
         )}
            

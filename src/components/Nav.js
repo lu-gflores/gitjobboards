@@ -1,11 +1,12 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import '../styles/Nav.css'
 
 const Nav = () => {
     return (
         <>
         <div className='nav-header'>
-            <div className="brand">devjobs</div>
+            <Link to='/' className="brand">devjobs</Link>
 
                 <div className="toggle-theme">
                     <label htmlFor='checkbox'>

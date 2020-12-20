@@ -1,14 +1,11 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 
-const PagePagination = ({page, setPage}) => {
+const PagePagination = () => {
+    
     return (
-            <ul className='pagination'>
-                <li className='page-item'><span aria-hidden="true">&laquo;</span></li>
-                <li className="page-item">
-                {page}
-                </li>
-            </ul>   
-     
+        <div>
+            
+        </div>
     )
 }
 
